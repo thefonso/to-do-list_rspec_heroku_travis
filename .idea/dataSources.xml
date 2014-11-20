@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3339862371">
+    <data-source source="LOCAL" name="Rails grant-to-do-list-wip: development" uuid="e804ecaa-c97c-442d-b00f-603bdcfdc038">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/grant-to-do-list-wip_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails grant-to-do-list-wip: test" uuid="fbd2b12f-b4b2-459d-b865-ff45d9b7f988">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:to-do-list-wip_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails grant-to-do-list-wip: production" uuid="b5e29118-7654-449e-b11c-f463670ef93d">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:to-do-list-wip_production</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
