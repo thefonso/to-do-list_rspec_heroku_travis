@@ -10,7 +10,7 @@ gem 'factory_girl_rails'
 
 group :development, :test do
   #add in the gem for rspec
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails'
 
   #add validation-association matchers
   gem 'shoulda-matchers', require: false
