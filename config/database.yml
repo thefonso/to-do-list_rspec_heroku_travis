@@ -14,13 +14,25 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-development:
+default: &default
   adapter: postgresql
   encoding: unicode
-  database: to-do-list-wip_development
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-  username: rails
-  password: rails
+
+development:
+  <<: *default
+  database: to-do-list_development
+
+  # The specified database role being used to connect to postgres.
+  # To create additional roles in postgres see `$ createuser --help`.
+  # When left blank, postgres will use the default role. This is
+  # the same name as the operating system user that initialized the database.
+  #username: to-do-list
+
+  # The password associated with the postgres role (username).
+  #password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,12 +60,29 @@ test:
   database: travis_ci_test
   username: postgres
   #<<: *default
-  #database: to-do-list-wip_test
+  #database: to-do-list_test
 
+# As with config/secrets.yml, you never want to store sensitive information,
+# like your database password, in your source code. If your source code is
+# ever seen by anyone, they now have access to your database.
+#
+# Instead, provide the password as a unix environment variable when you boot
+# the app. Read http://guides.rubyonrails.org/configuring.html#configuring-a-database
+# for a full rundown on how to provide these environment variables in a
+# production deployment.
+#
+# On Heroku and other platform providers, you may have a full connection URL
+# available as an environment variable. For example:
+#
+#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+#
+# You can use this database configuration with:
+#
+#   production:
+#     url: <%= ENV['DATABASE_URL'] %>
+#
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: to-do-list-wip_production
-  pool: 5
-  username: 
-  password:
+  <<: *default
+  database: to-do-list_production
+  username: to-do-list
+  password: <%= ENV['TO-DO-LIST_DATABASE_PASSWORD'] %>
